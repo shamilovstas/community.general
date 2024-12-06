@@ -218,6 +218,7 @@ class _CmdRunnerContext(object):
 
         if self.check_mode_skip and module.check_mode:
             return self.check_mode_return
+
         results = module.run_command(self.cmd, **self.run_command_args)
         self.results_rc, self.results_out, self.results_err = results
         self.results_processed = self.output_process(*results)
