@@ -76,8 +76,6 @@
         dest: "{{ android_cmdline_temp_dir }}"
         remote_src: yes
         creates: "{{ android_cmdline_temp_dir }}/cmdline-tools"
-      when: not sdkmanager_installed.stat.exists
-
 
     - name: Fix directory structure
       copy:
